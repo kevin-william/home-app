@@ -22,7 +22,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.iotServiceList.forEach(element => {
-      element.isAvaliable = this.httpCheckService.isHostAvaliable(element.url);
+      this.httpCheckService.isHostAvaliable(element);
     });
   }
 

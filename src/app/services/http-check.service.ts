@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { IotService } from '../models/iot-service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,18 +22,16 @@ export class HttpCheckService {
   //   return flag;
   // }
 
-  isHostAvaliable(hostname:string): boolean {
-    var flag = false;
-    this.http.get(`http://${hostname}`).subscribe(
+  isHostAvaliable(item: IotService) {
+    this.http.get(item.url).subscribe(
       res => {
         console.log("Host ${hostname} is available");
-        flag = true;
+        item.isAvaliable = true;
       },
       err => {
         console.error(`Error: ${err.message}`);
       }
     );
-    return flag;
   }
   
 }
