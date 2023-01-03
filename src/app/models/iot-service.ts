@@ -2,12 +2,14 @@ export class IotService {
     
     name:string;
     isAvaliable:boolean;
-    url:string;
+    host: string;
+    uri:string;
 
-    constructor(name:string, url:string){
+    constructor(name:string, url:string, host: string){
         this.name = name;
         this.isAvaliable = false;
-        this.url=url;
+        this.host = host; 
+        this.uri = url;
     }
 
 }

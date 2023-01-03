@@ -15,8 +15,8 @@ export class AppComponent {
   constructor(httpCheckService:HttpCheckService){
     this.httpCheckService= httpCheckService;
     this.iotServiceList = [
-      {isAvaliable:false, name:"cam 1", url:"http://192.168.1.82:81/stream"},
-      {isAvaliable:false, name:"cam 2", url:"http://192.168.1.84:81/stream"}
+      {isAvaliable:false, name:"cam 1", uri:":81/stream", host: "http://192.168.1.82"},
+      {isAvaliable:false, name:"cam 2", uri:":81/stream", host: "http://192.168.1.84"}
     ]
   }
 

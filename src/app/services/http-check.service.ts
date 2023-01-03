@@ -23,7 +23,7 @@ export class HttpCheckService {
   // }
 
   isHostAvaliable(item: IotService) {
-    this.http.get(item.url).subscribe(
+    this.http.get(item.host).subscribe(
       res => {
         console.log("Host ${hostname} is available");
         item.isAvaliable = true;
