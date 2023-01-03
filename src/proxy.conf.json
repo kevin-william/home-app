@@ -1,10 +1,10 @@
 {
     "/cam1": {
-        "target": "http://192.168.1.82:80",
+        "target": "http://192.168.1.82",
         "secure": false
     },
     "/cam2": {
-        "target": "http://192.168.1.84:80",
+        "target": "http://192.168.1.84",
         "secure": false
     }
 }
